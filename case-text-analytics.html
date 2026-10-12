@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#111827"/>
+<meta name="description" content="Interactive case study of an AI assisted enterprise text analytics platform designed and led by Anna Amoo."/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="AI Assisted Text Analytics | Anna Amoo"/>
+<meta property="og:description" content="Explore AI Insights, Topic Analysis, Keyword Explorer and Theme Discovery in an interactive product reconstruction."/>
+<meta property="og:url" content="https://annaamoo.github.io/case-text-analytics.html"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="canonical" href="https://annaamoo.github.io/case-text-analytics.html"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<title>AI Assisted Text Analytics | Anna Amoo</title>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="case.css"/>
+<link rel="stylesheet" href="text-analytics-demo.css"/>
+</head>
+<body>
+<header class="case-header"><a class="brand" href="index.html">anna<span>.product</span></a><a class="back" href="index.html#work">← Case studies</a></header>
+<main>
+<article class="case-page visual-case">
+  <div class="case-meta">CASE STUDY 01 · AI ASSISTED TEXT ANALYTICS · ENTERPRISE SAAS</div>
+  <h1>Designed and led the build of an AI assisted text analytics platform for enterprise customer intelligence.</h1>
+  <p class="case-intro">Designed for enterprise teams analyzing high volumes of customer feedback across automotive, financial services and other customer experience environments. The product connects AI synthesis, approved taxonomy analysis, customer language exploration, emerging theme discovery and the verbatim evidence behind each signal.</p>
+
+  <div class="summary">
+    <div><small>My role</small><strong>Product lead, definition and delivery</strong></div>
+    <div><small>Primary users</small><strong>CX, insights and admin teams</strong></div>
+    <div><small>Designed inputs</small><strong>Surveys, reviews, calls, email, tickets and social</strong></div>
+    <div><small>Core experience</small><strong>4 connected product surfaces</strong></div>
+  </div>
+
+  <section class="product-showcase first-showcase">
+    <div class="eyebrow">INTERACTIVE PRODUCT WALKTHROUGH</div>
+    <h2>Walk through the product experience.</h2>
+    <p class="section-lead">The reconstruction uses sample data while preserving the information architecture, interaction patterns, filters, drill downs and governance logic I defined for the product.</p>
+
+    <div class="interactive-wrap">
+      <div class="demo-intro">
+        <div><span class="demo-badge">Interactive reconstruction</span></div>
+        <p>Explore freely or start the guided walkthrough. Select insights, topics, theme tags, keywords and discovery candidates to see how each surface connects analysis to evidence.</p>
+      </div>
+
+      <div class="ta-demo" aria-label="Interactive Text Analytics product walkthrough">
+        <div class="ta-appbar">
+          <div class="ta-appbrand"><span class="ta-appbrand-mark">TA</span><span>Text Analytics</span></div>
+          <div class="ta-appbar-actions"><span class="ta-demo-label">Interactive reconstruction</span><button id="ta-tour-start" class="ta-tour-start" type="button">Start guided walkthrough</button></div>
+        </div>
+
+        <div class="ta-layout">
+          <aside class="ta-sidebar" aria-label="Text Analytics modules">
+            <span class="ta-side-label">ANALYZE</span>
+            <button class="ta-nav active" data-module="insights" data-label="AI Insights" type="button">AI Insights <span>01</span></button>
+            <button class="ta-nav" data-module="topics" data-label="Topic Analysis" type="button">Topic Analysis <span>02</span></button>
+            <button class="ta-nav" data-module="keywords" data-label="Keyword Explorer" type="button">Keyword Explorer <span>03</span></button>
+            <span class="ta-side-label admin">ADMIN</span>
+            <button class="ta-nav" data-module="themes" data-label="Theme Discovery" type="button">Theme Discovery <span>04</span></button>
+          </aside>
+
+          <div class="ta-main">
+            <div class="ta-context">
+              <select id="ta-period" aria-label="Period"><option>Last 90 days</option><option>Last 30 days</option><option>Year to date</option></select>
+              <select id="ta-hierarchy" aria-label="Hierarchy"><option>All hierarchy</option><option>Region East</option><option>Region West</option></select>
+              <select id="ta-source" aria-label="Source"><option>All feedback</option><option>Surveys</option><option>Reviews</option><option>Calls</option><option>Support tickets</option></select>
+              <span class="ta-context-note">Last 90 days · All hierarchy · All feedback</span>
+            </div>
+
+            <section class="ta-screen active" data-screen="insights">
+              <div class="ta-screen-head">
+                <div><small>AI INSIGHTS</small><h3>What matters in customer feedback right now?</h3><p>Three prioritized insights give leaders a balanced view, then connect each conclusion to the customer evidence behind it.</p></div>
+                <div class="ta-kpi"><b>12,480</b><span>comments analyzed</span></div>
+              </div>
+
+              <div class="ta-insights">
+                <button class="ta-insight positive" data-insight="positive" type="button"><small>POSITIVE</small><h4>Service friendliness improved</h4><p>Helpful staff and clear explanations are appearing more often in service feedback.</p><div class="ta-insight-footer"><span>Frontline service</span><span>↑ positive</span></div></button>
+                <button class="ta-insight neutral" data-insight="neutral" type="button"><small>NEUTRAL</small><h4>Appointment scheduling is shifting</h4><p>Digital booking mentions are rising while assisted channels remain important.</p><div class="ta-insight-footer"><span>Booking journey</span><span>watch</span></div></button>
+                <button class="ta-insight negative selected" data-insight="negative" type="button"><small>NEGATIVE</small><h4>Wait time complaints increased</h4><p>Long waits are concentrated in a smaller set of locations and peak periods.</p><div class="ta-insight-footer"><span>Capacity</span><span>↑ negative</span></div></button>
+              </div>
+
+              <div class="ta-insight-detail">
+                <div class="ta-detail-card"><h5>Selected insight</h5><strong id="ta-detail-title">Wait time complaints increased</strong><p id="ta-detail-body">Negative wait time mentions are concentrated in a smaller set of locations and peak periods.</p></div>
+                <div class="ta-detail-card"><h5>Suggested action</h5><div class="ta-action-grid"><div class="ta-action-item"><small>WHERE TO FOCUS</small><b id="ta-detail-focus">Capacity and communication</b></div><div class="ta-action-item"><small>OWNER</small><b id="ta-detail-owner">Operations</b></div><div class="ta-action-item"><small>EXPECTED IMPACT</small><b id="ta-detail-impact">Satisfaction</b></div><div class="ta-action-item"><small>ACTION</small><b id="ta-detail-action">Investigate peak period staffing and provide clearer delay expectations.</b></div></div></div>
+              </div>
+
+              <div class="ta-evidence">
+                <div class="ta-evidence-head"><div><small>CUSTOMER COMMENTS USED BY AI</small><b id="ta-insight-evidence-title">Evidence for Wait time complaints increased</b></div><div class="ta-evidence-filters"><button class="ta-filter ta-comment-filter active" data-scope="insight" data-filter="all">All</button><button class="ta-filter ta-comment-filter" data-scope="insight" data-filter="positive">Positive</button><button class="ta-filter ta-comment-filter" data-scope="insight" data-filter="neutral">Neutral</button><button class="ta-filter ta-comment-filter" data-scope="insight" data-filter="negative">Negative</button></div></div>
+                <div id="ta-insight-comments" class="ta-comments"></div>
+              </div>
+            </section>
+
+            <section class="ta-screen" data-screen="topics">
+              <div class="ta-screen-head"><div><small>TOPIC ANALYSIS</small><h3>Approved topics and subtopics</h3><p>Understand what customers are saying about the taxonomy the business already manages, then drill into the supporting comments.</p></div><div class="ta-kpi"><b>Frequency</b><span>default sort</span></div></div>
+
+              <div class="ta-toolbar">
+                <div class="ta-toolbar-left"><input id="ta-topic-search" class="ta-search" type="search" placeholder="Search matching topics"/><select id="ta-topic-sort" class="ta-sort"><option>Frequency</option><option>Fastest rising</option><option>Fastest falling</option><option>Most positive</option><option>Most negative</option><option>Highest NPS</option><option>Lowest NPS</option></select></div>
+                <button class="ta-filter" type="button" id="ta-export">Export Excel</button>
+              </div>
+
+              <div class="ta-table">
+                <div class="ta-row head"><div>Topic and subtopic</div><div>Sentiment</div><div>NPS</div><div>Change</div></div>
+                <div class="ta-row data ta-topic-row selected" data-key="topic-service" tabindex="0" title="2,416 mentions · 19.4% of feedback · 68% positive · NPS 42.0 · up 18.4%"><div><b>Service Experience</b><small>Staff friendliness · 2,416 mentions</small></div><div><div class="ta-sentiment"><i class="p" style="width:68%"></i><i class="n" style="width:20%"></i><i class="d" style="width:12%"></i></div></div><div><b>42.0</b></div><div class="ta-change up">▲ 18.4%</div></div>
+                <div class="ta-row data ta-topic-row" data-key="topic-appointment" tabindex="0" title="1,802 mentions · 14.4% of feedback · 48% negative · NPS 8.0 · down 11.2%"><div><b>Appointment</b><small>Wait time · 1,802 mentions</small></div><div><div class="ta-sentiment"><i class="p" style="width:28%"></i><i class="n" style="width:24%"></i><i class="d" style="width:48%"></i></div></div><div><b>8.0</b></div><div class="ta-change down">▼ 11.2%</div></div>
+                <div class="ta-row data ta-topic-row" data-key="topic-quality" tabindex="0" title="1,327 mentions · 10.6% of feedback · 61% positive · NPS 38.0 · up 7.6%"><div><b>Product Quality</b><small>Reliability · 1,327 mentions</small></div><div><div class="ta-sentiment"><i class="p" style="width:61%"></i><i class="n" style="width:27%"></i><i class="d" style="width:12%"></i></div></div><div><b>38.0</b></div><div class="ta-change up">▲ 7.6%</div></div>
+              </div>
+
+              <div class="ta-evidence">
+                <div class="ta-evidence-head"><div><small>SELECTED TOPIC PATH</small><b id="ta-topic-evidence-title">Service Experience › Staff friendliness</b></div><div class="ta-evidence-filters"><button class="ta-filter ta-comment-filter active" data-scope="topic" data-filter="all">All</button><button class="ta-filter ta-comment-filter" data-scope="topic" data-filter="positive">Positive</button><button class="ta-filter ta-comment-filter" data-scope="topic" data-filter="neutral">Neutral</button><button class="ta-filter ta-comment-filter" data-scope="topic" data-filter="negative">Negative</button></div></div>
+                <div id="ta-topic-comments" class="ta-comments"></div>
+              </div>
+            </section>
+
+            <section class="ta-screen" data-screen="keywords">
+              <div class="ta-screen-head"><div><small>KEYWORD EXPLORER</small><h3>Explore the exact language customers use</h3><p>Theme Tags support visual exploration. The Keyword Table supports structured comparison. Both lead to the same customer evidence.</p></div><div class="ta-kpi"><b>Highest volume</b><span>default sort</span></div></div>
+
+              <div class="ta-toolbar"><div class="ta-filter-tabs"><button class="ta-filter ta-keyword-filter active" data-filter="all">All sentiments</button><button class="ta-filter ta-keyword-filter" data-filter="positive">Positive</button><button class="ta-filter ta-keyword-filter" data-filter="neutral">Neutral</button><button class="ta-filter ta-keyword-filter" data-filter="negative">Negative</button></div><select class="ta-sort" id="ta-keyword-sort"><option>Highest volume</option><option>Lowest volume</option><option>Highest NPS</option><option>Lowest NPS</option></select></div>
+
+              <div class="ta-keyword-layout">
+                <div class="ta-tag-panel">
+                  <div class="ta-panel-head"><small>THEME TAGS</small><b>Visual language exploration</b><p>Hover for frequency, sentiment, NPS and cluster context.</p></div>
+                  <div class="ta-tag-cloud">
+                    <button class="ta-theme-tag selected" data-key="keyword-wait" data-dominant="negative" data-size="lg" data-tip="Wait experience · 1,284 mentions · 60% negative · NPS 5.0">wait</button>
+                    <button class="ta-theme-tag" data-key="keyword-helpful" data-dominant="positive" data-size="lg" data-tip="Service language · 972 mentions · 78% positive · NPS 51.0">helpful</button>
+                    <button class="ta-theme-tag" data-key="keyword-booking" data-dominant="neutral" data-size="md" data-tip="Booking journey · 731 mentions · mixed sentiment · NPS 31.0">booking</button>
+                    <button class="ta-theme-tag" data-key="keyword-staff" data-dominant="positive" data-size="md" data-tip="Service language · 644 mentions · 71% positive · NPS 47.0">staff</button>
+                    <button class="ta-theme-tag" data-key="keyword-communication" data-dominant="neutral" data-size="md" data-tip="Communication · 508 mentions · mixed sentiment · NPS 23.0">communication</button>
+                    <button class="ta-theme-tag" data-key="keyword-price" data-dominant="negative" data-size="sm" data-tip="Value language · 394 mentions · 52% negative · NPS 12.0">price</button>
+                    <button class="ta-theme-tag" data-key="keyword-easy" data-dominant="positive" data-size="sm" data-tip="Digital experience · 352 mentions · 74% positive · NPS 49.0">easy</button>
+                    <button class="ta-theme-tag" data-key="keyword-confirmation" data-dominant="neutral" data-size="sm" data-tip="Booking journey · 288 mentions · mixed sentiment · NPS 19.0">confirmation</button>
+                  </div>
+                </div>
+
+                <div class="ta-keyword-table-panel">
+                  <div class="ta-panel-head"><small>KEYWORD TABLE</small><b>Structured comparison</b><p>Frequency, sentiment, NPS and change versus the previous period.</p></div>
+                  <div class="ta-table">
+                    <div class="ta-row head"><div>Keyword</div><div>Sentiment</div><div>NPS</div><div>Change</div></div>
+                    <div class="ta-row data ta-keyword-row selected" data-key="keyword-wait" data-dominant="negative" tabindex="0" title="Wait experience cluster · 1,284 mentions · 60% negative · NPS 5.0"><div><b>wait</b><small>1,284 mentions</small></div><div><div class="ta-sentiment"><i class="p" style="width:18%"></i><i class="n" style="width:22%"></i><i class="d" style="width:60%"></i></div></div><div><b>5.0</b></div><div class="ta-change up">▲ 20.0%</div></div>
+                    <div class="ta-row data ta-keyword-row" data-key="keyword-helpful" data-dominant="positive" tabindex="0" title="Service language cluster · 972 mentions · 78% positive · NPS 51.0"><div><b>helpful</b><small>972 mentions</small></div><div><div class="ta-sentiment"><i class="p" style="width:78%"></i><i class="n" style="width:16%"></i><i class="d" style="width:6%"></i></div></div><div><b>51.0</b></div><div class="ta-change up">▲ 9.8%</div></div>
+                    <div class="ta-row data ta-keyword-row" data-key="keyword-booking" data-dominant="neutral" tabindex="0" title="Booking journey cluster · 731 mentions · mixed sentiment · NPS 31.0"><div><b>booking</b><small>731 mentions</small></div><div><div class="ta-sentiment"><i class="p" style="width:54%"></i><i class="n" style="width:30%"></i><i class="d" style="width:16%"></i></div></div><div><b>31.0</b></div><div class="ta-change down">▼ 3.1%</div></div>
+                    <div class="ta-row data ta-keyword-row" data-key="keyword-staff" data-dominant="positive" tabindex="0"><div><b>staff</b><small>644 mentions</small></div><div><div class="ta-sentiment"><i class="p" style="width:71%"></i><i class="n" style="width:20%"></i><i class="d" style="width:9%"></i></div></div><div><b>47.0</b></div><div class="ta-change up">▲ 6.4%</div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ta-evidence">
+                <div class="ta-evidence-head"><div><small>SELECTED KEYWORD</small><b id="ta-keyword-evidence-title">wait</b></div><div class="ta-evidence-filters"><button class="ta-filter ta-comment-filter active" data-scope="keyword" data-filter="all">All</button><button class="ta-filter ta-comment-filter" data-scope="keyword" data-filter="positive">Positive</button><button class="ta-filter ta-comment-filter" data-scope="keyword" data-filter="neutral">Neutral</button><button class="ta-filter ta-comment-filter" data-scope="keyword" data-filter="negative">Negative</button></div></div>
+                <div id="ta-keyword-comments" class="ta-comments"></div>
+              </div>
+            </section>
+
+            <section class="ta-screen" data-screen="themes">
+              <div class="ta-screen-head"><div><small>THEME DISCOVERY</small><h3>Review emerging topics and subtopics</h3><p>AI surfaces qualified candidates. Human reviewers decide what becomes part of the managed taxonomy.</p></div><div class="ta-kpi"><b>3</b><span>eligible candidates</span></div></div>
+
+              <div class="ta-candidate-layout">
+                <div class="ta-candidate-list">
+                  <button class="ta-candidate-item selected" data-key="candidate-advisor"><span class="ta-status">Eligible for review</span><h4>Advisor Knowledge</h4><p>Suggested subtopic</p><div class="ta-candidate-mini"><span>486 mentions</span><span>▲ 28%</span></div></button>
+                  <button class="ta-candidate-item" data-key="candidate-confirmation"><span class="ta-status">Eligible for review</span><h4>Digital Confirmation</h4><p>Suggested subtopic</p><div class="ta-candidate-mini"><span>311 mentions</span><span>▲ 17%</span></div></button>
+                  <button class="ta-candidate-item" data-key="candidate-price"><span class="ta-status">Eligible for review</span><h4>Price Transparency</h4><p>Suggested topic</p><div class="ta-candidate-mini"><span>254 mentions</span><span>▲ 12%</span></div></button>
+                </div>
+
+                <div class="ta-candidate-detail">
+                  <div class="ta-candidate-detail-top"><div><small id="ta-candidate-type">SUGGESTED SUBTOPIC</small><h4 id="ta-candidate-title">Advisor Knowledge</h4><p id="ta-candidate-desc">Customers increasingly discuss whether staff can explain products and service options clearly.</p></div><div class="ta-candidate-metric"><b id="ta-candidate-volume">486</b><span>mentions</span><span id="ta-candidate-change" class="ta-change up">▲ 28%</span></div></div>
+                  <div class="ta-candidate-info"><div><span>Suggested parent</span><b id="ta-candidate-parent">Service Experience</b></div><div><span>Closest existing topic</span><b id="ta-candidate-closest">Staff Helpfulness</b></div><div><span>Share of feedback</span><b id="ta-candidate-share">6.4%</b></div></div>
+                  <div class="ta-reason"><small>WHY SURFACED</small><p id="ta-candidate-reason">A repeated cluster of comments about the clarity and confidence of staff explanations reached the review threshold and increased versus the previous period.</p></div>
+                  <div class="ta-actions"><button class="primary" data-action="approve">Approve</button><button data-action="merge">Merge</button><button data-action="reject">Reject</button><button data-action="suppress">Suppress</button></div>
+                </div>
+              </div>
+
+              <div class="ta-evidence">
+                <div class="ta-evidence-head"><div><small>SUPPORTING COMMENTS</small><b id="ta-theme-evidence-title">Evidence for Advisor Knowledge</b></div></div>
+                <div id="ta-theme-comments" class="ta-comments"></div>
+              </div>
+              <div class="ta-governance"><span>Observed</span><span>→</span><span>Eligible for review</span><span>→</span><span class="current">Human decision</span><span>→</span><span>Future enrichment</span></div>
+            </section>
+          </div>
+        </div>
+
+        <div class="ta-tour" id="ta-tour">
+          <div><div id="ta-tour-step" class="ta-tour-progress">Walkthrough 1 of 4</div><div id="ta-tour-dots" class="ta-tour-dots"></div></div>
+          <div class="ta-tour-copy"><h4 id="ta-tour-title">Start with AI synthesis</h4><p id="ta-tour-body">Select one of the three insights, then inspect the customer evidence that supports it.</p></div>
+          <div class="ta-tour-actions"><button id="ta-tour-close">Close</button><button id="ta-tour-prev">Back</button><button id="ta-tour-next" class="next">Next</button></div>
+        </div>
+        <div class="ta-toast" id="ta-toast"></div>
+      </div>
+
+      <div class="demo-proof-strip">
+        <div><small>AI SYNTHESIS</small><b>Three prioritized insights connected to evidence</b></div>
+        <div><small>KNOWN TAXONOMY</small><b>Topic analysis with NPS and movement</b></div>
+        <div><small>CUSTOMER LANGUAGE</small><b>Theme Tags plus structured keyword comparison</b></div>
+        <div><small>AI GOVERNANCE</small><b>Human review for emerging taxonomy candidates</b></div>
+      </div>
+      <p class="portfolio-caption">Interactive reconstruction using sample data. No proprietary customer data or internal screens are shown.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">WHAT I OWNED</div>
+    <h2>I defined the product model, interaction rules and delivery detail.</h2>
+    <div class="decision-grid">
+      <div class="decision"><code>01</code><h3>Product architecture</h3><p>Separated AI synthesis, approved topic analysis, customer language exploration and emerging theme discovery so each surface has a distinct user job.</p></div>
+      <div class="decision"><code>02</code><h3>Information and interaction design</h3><p>Defined shared context, defaults, sorting, sentiment filters, evidence drill downs, selected state and the relationships between surfaces.</p></div>
+      <div class="decision"><code>03</code><h3>AI explainability and governance</h3><p>Kept insights traceable to comments and made discovered themes reviewable through rationale, parent suggestions, similarity context and human decision controls.</p></div>
+      <div class="decision"><code>04</code><h3>Delivery definition</h3><p>Translated the product model into functional requirements, business rules, user stories, acceptance criteria and edge cases for engineering and QA.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">PRODUCT RULES</div>
+    <h2>The screens were backed by explicit rules, not left for implementation to guess.</h2>
+    <div class="rule-list">
+      <div class="rule"><b>NPS</b><span>Promoter percentage minus detractor percentage for eligible survey responses. If a topic has 52% promoters and 14% detractors, NPS displays 38.0.</span></div>
+      <div class="rule"><b>Period change</b><span>The selected period is compared with the previous equivalent period. If current volume is 120 and previous volume is 100, change displays 20.0% increase.</span></div>
+      <div class="rule"><b>No eligible NPS</b><span>When there are no eligible NPS responses, the product displays a not available state rather than implying zero.</span></div>
+      <div class="rule"><b>Zero denominator</b><span>When the previous period total is zero, percentage change is not calculated because the result would be misleading.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">WHAT THIS DEMONSTRATES</div>
+    <h2>What this case demonstrates.</h2>
+    <div class="measure-grid">
+      <div class="measure"><b>Architecture</b><span>Four differentiated experiences operating as one customer intelligence product.</span></div>
+      <div class="measure"><b>Explainability</b><span>Every analytical signal has a path back to supporting customer evidence.</span></div>
+      <div class="measure"><b>Governance</b><span>AI assists discovery while humans control taxonomy decisions.</span></div>
+      <div class="measure"><b>Delivery depth</b><span>Requirements, calculations, defaults, edge cases and acceptance criteria were defined for implementation.</span></div>
+    </div>
+  </section>
+
+  <section class="next"><div class="eyebrow">NEXT CASE STUDY</div><a href="case-platform.html">Enterprise platform product →</a></section>
+</article>
+</main>
+<script src="script.js"></script>
+<script src="text-analytics-demo.js"></script>
+</body>
+</html>
